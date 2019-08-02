@@ -97,11 +97,13 @@ class Hangman(object):
             if self.failed == 4 or self.tried == self.trials:
                 self.infopage()
                 finished = True
+                print(self.word)
                 if self.failed == 4:
                     print("\nYou failed too many times!\n")
                 elif self.tried == 8:
                     print("\nYou tried too many times!\n")
-                for item in "GAME IS OVER":
+
+                for item in "GAME OVER":
                     i += 2
                     time.sleep(0.15)
                     print(end=i*" ")
